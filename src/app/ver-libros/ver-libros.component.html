@@ -1,0 +1,50 @@
+<div class="libros-container">
+  <h2>Biblioteca</h2>
+
+  <div class="libros-grid">
+    <div *ngFor="let libro of libros" class="libro-card">
+      <h3>{{ libro.nombre }}</h3>
+      <p><strong>Autor:</strong> {{ libro.autor }}</p>
+      <p><strong>Editorial:</strong> {{ libro.editorial }}</p>
+      <p><strong>Ediciones:</strong> {{ libro.ediciones }}</p>
+      <p><strong>Género:</strong> {{ libro.genero }}</p>
+      <p><strong>Creado por:</strong> {{ libro.usuario_creador }}</p>
+      <div class="card-actions">
+        <button (click)="editarLibro(libro.id)">Editar</button>
+        <button (click)="eliminarLibro(libro.id)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="crear-libro-btn" (click)="crearLibro()">Crear Nuevo Libro</button>
+  <button class="cerrar-sesion-btn" (click)="cerrarSesion()">Cerrar Sesión</button>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="libros-container">
+  <h2>Biblioteca</h2>
+
+  <div class="libros-grid">
+    <div *ngFor="let libro of libros" class="libro-card">
+      <h3>{{ libro.nombre }}</h3>
+      <p><strong>Autor:</strong> {{ libro.autor }}</p>
+      <p><strong>Editorial:</strong> {{ libro.editorial }}</p>
+      <p><strong>Ediciones:</strong> {{ libro.ediciones }}</p>
+      <p><strong>Género:</strong> {{ libro.genero }}</p>
+      <div class="card-actions">
+        <button (click)="editarLibro(libro.id)">Editar</button>
+        <button (click)="eliminarLibro(libro.id)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="crear-libro-btn" (click)="crearLibro()">Crear Nuevo Libro</button>
+</div>
+ -->
