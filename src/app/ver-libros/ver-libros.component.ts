@@ -50,16 +50,7 @@ export class VerLibrosComponent implements OnInit {
       error => console.error('Error al cargar libros:', error)
     );
   }
-  // cargarLibros(): void {
-  //   this.laravelService.service_Get('libros').subscribe(
-  //     (response: any) => {
-  //       if (response.estatus === 1) {
-  //         this.libros = response.data;
-  //       }
-  //     },
-  //     error => console.error('Error al cargar libros:', error)
-  //   );
-  // }
+  
 
   editarLibro(id: number): void {
     this.router.navigate(['/editar-libro', id]);
