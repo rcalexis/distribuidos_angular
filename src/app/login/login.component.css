@@ -1,141 +1,107 @@
 * {
   padding: 0;
   margin: 0;
-}
-
-*, *:before, *:after {
   box-sizing: border-box;
 }
 
 body {
-  background: #e6f2ff; /* Un azul muy claro */
-  font-family: "Ubuntu", helvetica;
+  background: #e6f2ff;
+  font-family: "Ubuntu", sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: #2ecc71; /* Un verde más brillante */
-  transition: .5s ease;
+  color: #2ecc71;
+  transition: 0.3s ease;
 }
-
 a:hover {
-  color: #27ae60; /* Un verde más oscuro al hacer hover */
+  color: #27ae60;
 }
 
 .contenedor-formularios {
-  background: rgba(19, 35, 47, 0.8); /* Ligeramente más opaco para contrastar con el fondo claro */
+  background: rgba(19, 35, 47, 0.75);
+  backdrop-filter: blur(10px);
   padding: 40px;
-  max-width: 600px;
-  margin: 40px auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  max-width: 500px;
+  margin: 50px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
 h1 {
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   font-weight: 300;
-  margin: 0 0 40px;
-}
-
-label {
-  position: absolute;
-  transform: translateY(6px);
-  left: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  transition: all 0.25s ease;
-  -webkit-backface-visibility: hidden;
-  pointer-events: none;
-  font-size: 22px;
-}
-
-label .req {
-  margin: 2px;
-  color: #1ab188;
-}
-
-label.active {
-  transform: translateY(50px);
-  left: 2px;
-  font-size: 14px;
-}
-
-label.active .req {
-  opacity: 0;
-}
-
-label.highlight {
-  color: #ffffff;
-}
-
-input {
-  font-size: 22px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 5px 10px;
-  background: none;
-  background-image: none;
-  border: 1px solid #a0b3b0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  color: #ffffff;
-  border-radius: 0;
-  transition: all 0.5s ease;
-  border-radius: 5px;
-}
-
-input:focus {
-  outline: none;
-  border-color: #1ab188;
+  margin-bottom: 30px;
 }
 
 .contenedor-input {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  transition: 0.3s ease;
+  font-size: 16px;
+}
+
+label .req {
+  color: #1ab188;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(160, 179, 176, 0.6);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 16px;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+input:focus {
+  border-color: #1ab188;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .button {
-  border: 0;
-  outline: none;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 15px 0;
-  font-size: 2rem;
-  background: #2ecc71; /* Verde más brillante */
-  color: #ffffff;
-  transition: all .5s ease;
-  -webkit-appearance: none;
-}
-
-.button:hover, .button:focus {
-  background: #27ae60; /* Verde más oscuro al hacer hover */
-}
-
-.button-block {
-  display: block;
+  display: inline-block;
   width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background-color: #27ae60;
+  transform: scale(1.03);
 }
 
 .forgot {
-  margin-top: -20px;
   text-align: right;
+  margin-top: -15px;
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 500px) {
-  .fila-arriba div {
-    width: 100%;
-  }
-  .fila-arriba div:last-child {
-    margin-bottom: 40px;
+  .contenedor-formularios {
+    padding: 30px 20px;
   }
 }
-
-@media screen and (max-width: 400px) {
-  .contenedor-tabs li a {
-    width: 100%;
-  }
-}
-

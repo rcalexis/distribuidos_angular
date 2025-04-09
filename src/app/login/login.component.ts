@@ -3,11 +3,12 @@ import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { LocalstorageService } from '../services/localstorage.service';
-
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common'
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule,],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -51,5 +52,10 @@ export class LoginComponent {
     this.router.navigate(['/register']);
   }
 
+  showPassword = false;
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
 
 }
